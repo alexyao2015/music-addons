@@ -11,13 +11,4 @@ arch:
   - amd64
 map:
   - addon_config:rw
-ports:
-  1704/tcp: 1704
-  1705/tcp: null
-  1780/tcp: null
-  4953/tcp: null
-ports_description:
-  1704/tcp: Snapcast Client TCP
-  1705/tcp: Snapcast TCP RPC API
-  1780/tcp: Snapcast Web UI
-  4953/tcp: Snapcast TCP Stream
+host_network: true
