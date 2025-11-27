@@ -11,6 +11,9 @@ RUN apk add \
         avahi \
         dbus
 
+# Create required dbus directories
+RUN mkdir -p /run/dbus
+
 RUN wget -O snapweb.zip https://github.com/badaix/snapweb/releases/download/v0.9.2/snapweb.zip \
     && rm -rf /usr/share/snapserver/snapweb \
     && mkdir -p /usr/share/snapserver/snapweb \
