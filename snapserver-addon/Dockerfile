@@ -9,5 +9,11 @@ ARG SNAPCAST_VERSION
 RUN apk add \
         snapcast-server=${SNAPCAST_VERSION}
 
+RUN wget -O snapweb.zip https://github.com/badaix/snapweb/releases/download/v0.9.2/snapweb.zip \
+    && rm -rf /usr/share/snapserver/snapweb \
+    && mkdir -p /usr/share/snapserver/snapweb \
+    && unzip snapweb.zip -d /usr/share/snapserver/snapweb \
+    && rm snapweb.zip
+
 # Copy root filesystem
 COPY rootfs /
