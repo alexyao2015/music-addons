@@ -1,0 +1,9 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Runs D-Bus system daemon
+# ==============================================================================
+bashio::log.info "Starting D-Bus daemon..."
+
+# Run dbus-daemon in foreground
+exec dbus-daemon --system --nofork --nopidfile
+
