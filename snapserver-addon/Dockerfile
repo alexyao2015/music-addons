@@ -7,7 +7,8 @@ ARG SNAPCAST_VERSION
 
 # install snapcast
 RUN apk add \
-        snapcast-server=${SNAPCAST_VERSION}
+        snapcast-server=${SNAPCAST_VERSION} \
+        avahi
 
 RUN wget -O snapweb.zip https://github.com/badaix/snapweb/releases/download/v0.9.2/snapweb.zip \
     && rm -rf /usr/share/snapserver/snapweb \

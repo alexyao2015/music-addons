@@ -1,0 +1,8 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Runs avahi-daemon
+# ==============================================================================
+bashio::log.info "Starting avahi-daemon..."
+
+# Run avahi-daemon
+exec avahi-daemon --no-drop-root --debug
